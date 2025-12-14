@@ -1,0 +1,11 @@
+﻿  StaticLibrary.cpp
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\StaticLibrary\StaticLibrary.cpp(92,17): warning C4297: power: ожидается, что функция не будет выдавать исключения, но она это делает
+      D:\univer\2_course\labs\kpo\course-project\SPP-2025\StaticLibrary\StaticLibrary.cpp(92,17):
+      Функция типа extern "C", указан параметр /EHc
+  
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\StaticLibrary\StaticLibrary.cpp(111,17): warning C4297: factorial: ожидается, что функция не будет выдавать исключения, но она это делает
+      D:\univer\2_course\labs\kpo\course-project\SPP-2025\StaticLibrary\StaticLibrary.cpp(111,17):
+      Функция типа extern "C", указан параметр /EHc
+  
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\StaticLibrary\StaticLibrary.cpp(120,19): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  StaticLibrary.vcxproj -> D:\univer\2_course\labs\kpo\course-project\SPP-2025\Debug\StaticLibrary.lib

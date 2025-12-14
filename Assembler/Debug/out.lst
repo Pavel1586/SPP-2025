@@ -1,0 +1,273 @@
+Microsoft (R) Macro Assembler Version 14.44.35221.0	    12/15/25 00:08:18
+out.asm							     Page 1 - 1
+
+
+				.586
+				.model flat, stdcall
+				includelib libucrt.lib
+				includelib kernel32.lib
+				includelib ../Debug/StaticLibrary.lib
+				ExitProcess PROTO:DWORD 
+				.stack 4096
+
+
+				 outlich PROTO : DWORD
+
+				 outrad PROTO : DWORD
+
+				 concat PROTO : DWORD, : DWORD, : DWORD
+
+				 power PROTO : DWORD, : DWORD, : DWORD
+
+				 factorial PROTO : DWORD, : DWORD
+
+				 compare PROTO : DWORD, : DWORD, : DWORD
+
+				 rnd PROTO : DWORD, : DWORD, : DWORD
+
+				 slength PROTO : DWORD, : DWORD
+
+				 atoii  PROTO : DWORD,  : DWORD
+
+				 copystr PROTO : DWORD, : DWORD
+
+ 00000000			.const
+ 00000000 0D 0A 00				newline byte 13, 10, 0
+ 00000003 0000000A				LTRL1 sdword 10
+ 00000007 0000000C				LTRL2 sdword 12
+ 0000000B 48 65 6C 6C 6F			LTRL3 byte 'Hello', 0
+	   00
+ 00000011 0000004D				LTRL4 sdword 77
+ 00000015 73 75 6D 20 3D			LTRL5 byte 'sum =', 0
+	   00
+ 0000001B 6D 75 6C 20 3D			LTRL6 byte 'mul =', 0
+	   00
+ 00000021 6F 63 74 61 6C			LTRL7 byte 'octal =', 0
+	   20 3D 00
+ 00000029 00000005				LTRL8 sdword 5
+ 0000002D 78 20 65 71 75			LTRL9 byte 'x equals 5', 0
+	   61 6C 73 20 35
+	   00
+ 00000038 78 20 65 71 75			LTRL10 byte 'x equals 10', 0
+	   61 6C 73 20 31
+	   30 00
+ 00000044 78 20 69 73 20			LTRL11 byte 'x is different', 0
+	   64 69 66 66 65
+	   72 65 6E 74 00
+ 00000000			.data
+ 00000000 00000000				temp sdword ?
+ 00000004  00000100 [				buffer byte 256 dup(0)
+	    00
+	   ]
+ 00000104 00000000				mainx dword 0
+ 00000108 00000000				mainy dword 0
+ 0000010C 00000000				mainmsg dword ?
+ 00000110 00000000				mainsum dword 0
+ 00000114 00000000				mainmul dword 0
+ 00000118 00000000				mainoct dword 0
+ 0000011C 00000000				mainresult dword 0
+ 00000120 00000000				mainless dword 0
+ 00000000			.code
+
+				;----------- MAIN ------------
+ 00000000			main PROC
+ 00000000  FF 35 00000003 R	push LTRL1
+
+ 00000006  5B			pop ebx
+ 00000007  89 1D 00000104 R	mov mainx, ebx
+
+ 0000000D  FF 35 00000007 R	push LTRL2
+
+ 00000013  5B			pop ebx
+ 00000014  89 1D 00000108 R	mov mainy, ebx
+
+ 0000001A  C7 05 0000010C R	mov mainmsg, offset LTRL3
+	   0000000B R
+ 00000024  FF 35 00000104 R	push mainx
+ 0000002A  FF 35 00000108 R	push mainy
+ 00000030  5B			pop ebx
+ 00000031  58			pop eax
+ 00000032  03 C3		add eax, ebx
+ 00000034  50			push eax
+
+ 00000035  5B			pop ebx
+ 00000036  89 1D 00000110 R	mov mainsum, ebx
+
+ 0000003C  FF 35 00000104 R	push mainx
+ 00000042  FF 35 00000108 R	push mainy
+ 00000048  5B			pop ebx
+ 00000049  58			pop eax
+ 0000004A  0F AF C3		imul eax, ebx
+ 0000004D  50			push eax
+
+ 0000004E  5B			pop ebx
+ 0000004F  89 1D 00000114 R	mov mainmul, ebx
+
+ 00000055  FF 35 00000011 R	push LTRL4
+
+ 0000005B  5B			pop ebx
+ 0000005C  89 1D 00000118 R	mov mainoct, ebx
+
+ 00000062  FF 35 00000104 R	push mainx
+ 00000068  FF 35 00000108 R	push mainy
+ 0000006E  5B			pop ebx
+ 0000006F  58			pop eax
+ 00000070  3B C3		cmp eax, ebx
+ 00000072  0F 9F C0		setg al
+ 00000075  0F B6 C0		movzx eax, al
+ 00000078  50			push eax
+
+ 00000079  5B			pop ebx
+ 0000007A  89 1D 0000011C R	mov mainresult, ebx
+
+ 00000080  FF 35 00000104 R	push mainx
+ 00000086  FF 35 00000108 R	push mainy
+ 0000008C  5B			pop ebx
+ 0000008D  58			pop eax
+ 0000008E  3B C3		cmp eax, ebx
+ 00000090  0F 9E C0		setle al
+ 00000093  0F B6 C0		movzx eax, al
+ 00000096  50			push eax
+
+ 00000097  5B			pop ebx
+ 00000098  89 1D 00000120 R	mov mainless, ebx
+
+
+ 0000009E  FF 35 0000010C R	push mainmsg
+ 000000A4  E8 00000000 E	call outrad
+
+
+ 000000A9  68 00000015 R	push offset LTRL5
+ 000000AE  E8 00000000 E	call outrad
+
+
+ 000000B3  FF 35 00000110 R	push mainsum
+ 000000B9  E8 00000000 E	call outlich
+
+
+ 000000BE  68 0000001B R	push offset LTRL6
+ 000000C3  E8 00000000 E	call outrad
+
+
+ 000000C8  FF 35 00000114 R	push mainmul
+ 000000CE  E8 00000000 E	call outlich
+
+
+ 000000D3  68 00000021 R	push offset LTRL7
+ 000000D8  E8 00000000 E	call outrad
+
+
+ 000000DD  FF 35 00000118 R	push mainoct
+ 000000E3  E8 00000000 E	call outlich
+
+ 000000E8  A1 00000104 R	mov eax, mainx
+
+ 000000ED  83 F8 05		cmp eax, 5
+ 000000F0  75 0C		jne case_next1
+
+
+ 000000F2  68 0000002D R	push offset LTRL9
+ 000000F7  E8 00000000 E	call outrad
+
+ 000000FC  EB 1D		jmp switch_end1
+
+ 000000FE			case_next1:
+ 000000FE  83 F8 0A		cmp eax, 10
+ 00000101  75 FB		jne case_next1
+
+
+ 00000103  68 00000038 R	push offset LTRL10
+ 00000108  E8 00000000 E	call outrad
+
+ 0000010D  EB 0C		jmp switch_end1
+
+ 0000010F			default_case1:
+
+
+ 0000010F  68 00000044 R	push offset LTRL11
+ 00000114  E8 00000000 E	call outrad
+
+ 00000119  EB 00		jmp switch_end1
+
+ 0000011B			switch_end1:
+
+ 0000011B  6A 00		push 0
+ 0000011D  E8 00000000 E	call ExitProcess
+ 00000122			main ENDP
+				end main
+Microsoft (R) Macro Assembler Version 14.44.35221.0	    12/15/25 00:08:18
+out.asm							     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+CONST  . . . . . . . . . . . . .	32 Bit	 00000053 Para	  Public  'CONST'	 ReadOnly
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000124 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000122 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+atoii  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+compare  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+concat . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+copystr  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+factorial  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000122 Public STDCALL
+  case_next1 . . . . . . . . . .	L Near	 000000FE _TEXT	
+  default_case1  . . . . . . . .	L Near	 0000010F _TEXT	
+  switch_end1  . . . . . . . . .	L Near	 0000011B _TEXT	
+outlich  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+outrad . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+power  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+rnd  . . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+slength  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+LTRL10 . . . . . . . . . . . . .	Byte	 00000038 CONST	
+LTRL11 . . . . . . . . . . . . .	Byte	 00000044 CONST	
+LTRL1  . . . . . . . . . . . . .	DWord	 00000003 CONST	
+LTRL2  . . . . . . . . . . . . .	DWord	 00000007 CONST	
+LTRL3  . . . . . . . . . . . . .	Byte	 0000000B CONST	
+LTRL4  . . . . . . . . . . . . .	DWord	 00000011 CONST	
+LTRL5  . . . . . . . . . . . . .	Byte	 00000015 CONST	
+LTRL6  . . . . . . . . . . . . .	Byte	 0000001B CONST	
+LTRL7  . . . . . . . . . . . . .	Byte	 00000021 CONST	
+LTRL8  . . . . . . . . . . . . .	DWord	 00000029 CONST	
+LTRL9  . . . . . . . . . . . . .	Byte	 0000002D CONST	
+buffer . . . . . . . . . . . . .	Byte	 00000004 _DATA	
+mainless . . . . . . . . . . . .	DWord	 00000120 _DATA	
+mainmsg  . . . . . . . . . . . .	DWord	 0000010C _DATA	
+mainmul  . . . . . . . . . . . .	DWord	 00000114 _DATA	
+mainoct  . . . . . . . . . . . .	DWord	 00000118 _DATA	
+mainresult . . . . . . . . . . .	DWord	 0000011C _DATA	
+mainsum  . . . . . . . . . . . .	DWord	 00000110 _DATA	
+mainx  . . . . . . . . . . . . .	DWord	 00000104 _DATA	
+mainy  . . . . . . . . . . . . .	DWord	 00000108 _DATA	
+newline  . . . . . . . . . . . .	Byte	 00000000 CONST	
+temp . . . . . . . . . . . . . .	DWord	 00000000 _DATA	
+
+	   0 Warnings
+	   0 Errors

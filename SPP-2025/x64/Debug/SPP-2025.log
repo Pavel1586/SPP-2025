@@ -1,0 +1,48 @@
+﻿  Error.cpp
+  FST.cpp
+  Generator.cpp
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\Generator.cpp(163,9): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\Generator.cpp(271,15): warning C4129: ".": нераспознанная escape-последовательность символов
+  GRB.cpp
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(112,46): warning C4305: аргумент: усечение из "int" в "char"
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(112,46): warning C4309: аргумент: усечение константного значения
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(134,8): warning C4305: аргумент: усечение из "int" в "char"
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(134,8): warning C4309: аргумент: усечение константного значения
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(135,19): warning C4305: аргумент: усечение из "int" в "char"
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(135,19): warning C4309: аргумент: усечение константного значения
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(136,19): warning C4305: аргумент: усечение из "int" в "char"
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(136,19): warning C4309: аргумент: усечение константного значения
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(136,29): warning C4305: аргумент: усечение из "int" в "char"
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(136,29): warning C4309: аргумент: усечение константного значения
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(139,8): warning C4305: аргумент: усечение из "int" в "char"
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(139,8): warning C4309: аргумент: усечение константного значения
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(140,46): warning C4305: аргумент: усечение из "int" в "char"
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(140,46): warning C4309: аргумент: усечение константного значения
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(144,8): warning C4305: аргумент: усечение из "int" в "char"
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\GRB.cpp(144,8): warning C4309: аргумент: усечение константного значения
+  In.cpp
+  IT.cpp
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\IT.cpp(67,42): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+  LexAnalysis.cpp
+  Log.cpp
+  LT.cpp
+  SPP-2025.cpp
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\SPP-2025.cpp(60,13): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\SPP-2025.cpp(173,13): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  MFST.cpp
+  Parm.cpp
+  PolishNotation.cpp
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(76,22): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,46): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,79): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,105): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,132): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,158): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,188): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,217): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,241): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,270): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\PolishNotation.cpp(178,296): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+  SemAnalysis.cpp
+  Создание кода...
+  SPP-2025.vcxproj -> D:\univer\2_course\labs\kpo\course-project\SPP-2025\x64\Debug\SPP-2025.exe

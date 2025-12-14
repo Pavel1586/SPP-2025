@@ -1,0 +1,41 @@
+main [
+    var integer x = 10;
+    var integer y = 012;
+    var string msg = "Hello";
+    
+    var integer sum;
+    sum = x + y;
+    
+    var integer mul;
+    mul = x * y;
+    
+    var integer oct;
+    oct = 077;
+    
+    var integer result;
+    result = (x > y);
+    
+    var integer less;
+    less = (x <= y);
+    
+    output msg;
+    output "sum =";
+    output sum;
+    output "mul =";
+    output mul;
+    output "octal =";
+    output oct;
+    
+    switch x [
+        case 5 
+            output "x equals 5"; 
+            break;
+        case 10 
+            output "x equals 10"; 
+            break;
+        default 
+            output "x is different"; 
+            break;
+    ]
+]
+

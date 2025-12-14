@@ -1,0 +1,60 @@
+﻿Сборка начата 15.12.2025 00:25:02.
+Уровень детализации журнала: Normal.     1>Проект "D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\SPP-2025\SPP-2025.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "Debug\SPP-2025.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\SPP-2025.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Error.cpp FST.cpp Generator.cpp GRB.cpp In.cpp IT.cpp LexAnalysis.cpp Log.cpp LT.cpp "SPP-2025.cpp" MFST.cpp Parm.cpp PolishNotation.cpp SemAnalysis.cpp
+         Error.cpp
+         FST.cpp
+         Generator.cpp
+     1>D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\SPP-2025\Generator.cpp(266,15): warning C4129: ".": нераспознанная escape-последовательность символов
+         GRB.cpp
+         In.cpp
+         IT.cpp
+         LexAnalysis.cpp
+         Log.cpp
+         LT.cpp
+         SPP-2025.cpp
+         MFST.cpp
+         Parm.cpp
+         PolishNotation.cpp
+     1>D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\SPP-2025\PolishNotation.cpp(40,39): warning C4018: <: несоответствие типов со знаком и без знака
+         SemAnalysis.cpp
+         Создание кода...
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\Debug\SPP-2025.exe" /INCREMENTAL /ILK:"Debug\SPP-2025.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\Debug\SPP-2025.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\Debug\SPP-2025.lib" /MACHINE:X86 Debug\Error.obj
+         Debug\FST.obj
+         Debug\Generator.obj
+         Debug\GRB.obj
+         Debug\In.obj
+         Debug\IT.obj
+         Debug\LexAnalysis.obj
+         Debug\Log.obj
+         Debug\LT.obj
+         "Debug\SPP-2025.obj"
+         Debug\MFST.obj
+         Debug\Parm.obj
+         Debug\PolishNotation.obj
+         Debug\SemAnalysis.obj
+         SPP-2025.vcxproj -> D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\Debug\SPP-2025.exe
+       TlogCleanup:
+         Следующие элементы будут удалены из tlogs, так как они были удалены из проекта или сборки: D:\univer\2_course\labs\kpo\course-project\SPP-2025\SPP-2025\Error.cpp.
+       FinalizeBuildStatus:
+         Файл "Debug\SPP-2025.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\SPP-2025.tlog\SPP-2025.lastbuildstate".
+     1>Сборка проекта "D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\SPP-2025\SPP-2025.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\SPP-2025\SPP-2025.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\SPP-2025\Generator.cpp(266,15): warning C4129: ".": нераспознанная escape-последовательность символов
+         D:\univer\2_course\labs\kpo\course-project\CP\SPP-2025\SPP-2025\PolishNotation.cpp(40,39): warning C4018: <: несоответствие типов со знаком и без знака
+
+    Предупреждений: 2
+    Ошибок: 0
+
+Прошло времени 00:00:13.62
